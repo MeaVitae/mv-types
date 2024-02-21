@@ -73,6 +73,7 @@ export type Contact = {
   prefix: string;
   suffix: string;
   genderType: string;
+  genderIdentity: string;
   jobTitle: string;
   organisationName: string;
   website: string;
