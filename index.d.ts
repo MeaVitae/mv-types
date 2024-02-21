@@ -1,11 +1,11 @@
 export type SecurityKeyObject = {
   securityKeyId: string;
-	credentialId: string;
-	credential?: string;
-	name: string;
-	notes: string;
-	created: number;
-	lastModified: number;
+  credentialId: string;
+  credential?: string;
+  name: string;
+  notes: string;
+  created: number;
+  lastModified: number;
 }
 
 export type ArmoredPublicKeyObject = {
@@ -46,45 +46,37 @@ export type IdpUser = {
   iss: string;
 }
 
+export type Address = {
+  street: string;
+  city: string;
+  postalCode: string;
+  region: string;
+  country: string;
+}
+
 export type Contact = {
+  contactId: string;
   externalId: string;
-  id: string;
-  uuid: string;
-  iconURL: string;
+  userId: string | null;
+  armoredPublicKey: string | null;
+  image: string;
   about: string;
-  publicKey: string;
-  linkedInId: string;
-  facebookId: string;
-  twitterId: string;
-  instagramId: string;
-  tiktokId: string;
-  googleId: string;
-  microsoftId: string;
   type: string;
-  userId: string;
   firstName: string;
   middleNames: string;
   lastName: string;
-  dateOfBirth: string;
+  dateOfBirth: number | null;
   placeOfBirth: string;
-  addresses: Array<any>;
+  addresses: Array<Address>;
   emailAddresses: Array<string>;
   phoneNumbers: Array<string>;
-  prefixes: string;
-  suffixes: string;
+  prefix: string;
+  suffix: string;
   genderType: string;
-  genderIdentity: string;
   jobTitle: string;
   organisationName: string;
-  organisationRegisteredNumber: string;
-  organisationTerritoryOfIncorporation: string;
-  isCharity: boolean;
-  acronym: string;
-  isUkRegistered: boolean;
-  charityNumber: string;
   website: string;
-  createdDate: string;
-  notes: string;
+  createdDate: number;
   source: string;
-  isValid: boolean;
+  searchKey: string;
 }
