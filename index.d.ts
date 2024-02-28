@@ -52,6 +52,7 @@ export type Address = {
   postalCode: string;
   region: string;
   country: string;
+  isPref?: boolean;
 }
 
 export type Contact = {
