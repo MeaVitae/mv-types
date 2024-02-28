@@ -46,13 +46,22 @@ export type IdpUser = {
   iss: string;
 }
 
+export type EmailAddress = {
+  label: 'home' | 'cell' | 'work' | string;
+  email: string;
+}
+
+export type PhoneNumber = {
+  label: 'home' | 'cell' | 'work' | string;
+  phoneNumber: string;
+}
+
 export type Address = {
   street: string;
   city: string;
   postalCode: string;
   region: string;
   country: string;
-  isPref?: boolean;
 }
 
 export type Contact = {
@@ -69,8 +78,8 @@ export type Contact = {
   dateOfBirth: number | null;
   placeOfBirth: string;
   addresses: Array<Address>;
-  emailAddresses: Array<string>;
-  phoneNumbers: Array<string>;
+  emailAddresses: Array<EmailAddress>;
+  phoneNumbers: Array<PhoneNumber>;
   prefix: string;
   suffix: string;
   genderType: string;

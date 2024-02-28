@@ -1,6 +1,6 @@
 {
   "name": "@meavitae/mv-types",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Meavitae Types",
   "types": "index",
   "scripts": {
