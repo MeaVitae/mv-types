@@ -47,7 +47,7 @@ export type IdpUser = {
 }
 
 export type EmailAddress = {
-  label: 'home' | 'cell' | 'work' | string;
+  label: 'home' | 'work' | string;
   email: string;
 }
 
