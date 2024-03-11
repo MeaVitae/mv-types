@@ -91,3 +91,31 @@ export type Contact = {
   source: string;
   searchKey: string;
 }
+
+export type FileNodePermissions = {
+  read: string[];
+  write: string[];
+}
+
+export type FileNodeMember = {
+  userId: string;
+  firstName: string;
+  middleNames: string;
+  lastName: string;
+  armoredPublicKey: string;
+  userAcceptedTimestamp: number | null;
+  userRejectedTimestamp: number | null;
+}
+
+export type EncryptedFileNode = {
+  id: string;
+  encryptedFileNode: string;
+  readOnly: boolean;
+  ownerUserId: string;
+  permissions: FileNodePermissions;
+  createDate: number;
+  updateDate: number;
+  updateUserId: string;
+  hasHistory: boolean;
+  members: FileNodeMember[];
+}
