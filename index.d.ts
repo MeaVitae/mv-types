@@ -99,12 +99,14 @@ export type FileNodePermissions = {
 
 export type FileNodeMember = {
   userId: string;
-  firstName: string;
-  middleNames: string;
-  lastName: string;
   armoredPublicKey: string;
-  userAcceptedTimestamp: number | null;
-  userRejectedTimestamp: number | null;
+  firstName: string;
+  middleNames?: string;
+  lastName: string;
+  avatarUrl: string;
+  allowWrite: boolean;
+  acceptedTimestamp: number;
+  rejectedTimestamp: number;
 }
 
 export type EncryptedFileNode = {
