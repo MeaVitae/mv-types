@@ -14,6 +14,11 @@ export type ArmoredPublicKeyObject = {
   scope: string;
 }
 
+export type DeviceNotificationToken = {
+  deviceId: string;
+  token: string;
+}
+
 export type IdpUser = {
   sessionId: string;
   userId: string;
@@ -32,6 +37,10 @@ export type IdpUser = {
   subscribedFeatures: number[];
   subscriptionProductId: string;
   isPrivate: boolean;
+  receiveEmailNotificiations: boolean;
+  receiveApplePN: boolean;
+  receiveGCM: boolean;
+  deviceNotificationTokens: DeviceNotificationToken[];
   permissions: any[];
   createdDate: number;
   rpId: string;
