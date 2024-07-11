@@ -1,3 +1,5 @@
+export {}
+
 export type SecurityKeyObject = {
   securityKeyId: string;
   credentialId: string;
@@ -19,6 +21,11 @@ export type DeviceNotificationToken = {
   token: string;
 }
 
+export type IdpUserPermission = {
+  scope: string;
+  role: string;
+}
+
 export type IdpUser = {
   sessionId: string;
   userId: string;
@@ -30,9 +37,10 @@ export type IdpUser = {
   address2: string;
   postcode: string;
   country: string;
-  avatarUrl: string;
+  avatar?: string;
+  avatarUrl?: string;
   locale: string;
-  subscribed: boolean;
+  subscribed?: boolean;
   subscribedUntilDate: number;
   subscribedFeatures: number[];
   subscriptionProductId: string;
@@ -41,18 +49,18 @@ export type IdpUser = {
   receiveApplePN: boolean;
   receiveGCM: boolean;
   deviceNotificationTokens: DeviceNotificationToken[];
-  permissions: any[];
+  permissions: IdpUserPermission[];
   createdDate: number;
-  rpId: string;
-  challenge: string;
   lastLoginTimestamp: number;
   armoredPublicKey?: string;
 	encryptedArmoredPrivateKey?: string;
 	securityKeyObjects?: SecurityKeyObject[];
   authorizedUsersOfVault?: Omit<ArmoredPublicKeyObject, "armoredPublicKey">[];
-  iat: number;
-  exp: number;
-  iss: string;
+  rpId?: string;
+  challenge?: string;
+  iat?: number;
+  exp?: number;
+  iss?: string;
 }
 
 export type EmailAddress = {

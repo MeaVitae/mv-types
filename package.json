@@ -1,11 +1,9 @@
 {
   "name": "@meavitae/mv-types",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Meavitae Types",
   "types": "index",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MeaVitae/mv-types.git"
