@@ -20,7 +20,7 @@ export type DeviceNotificationToken = {
   os: string;
   deviceId: string;
   nativeDeviceToken: string;
-  expoDeviceToken: string;
+  fcmDeviceToken: string;
 }
 
 export type IdpUserPermission = {
