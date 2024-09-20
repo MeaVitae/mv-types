@@ -17,8 +17,10 @@ export type ArmoredPublicKeyObject = {
 }
 
 export type DeviceNotificationToken = {
+  os: string;
   deviceId: string;
-  token: string;
+  nativeDeviceToken: string;
+  expoDeviceToken: string;
 }
 
 export type IdpUserPermission = {
