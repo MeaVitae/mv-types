@@ -140,3 +140,24 @@ export type EncryptedFileNode = {
   hasHistory: boolean;
   members: FileNodeMember[];
 }
+
+export type Medication = {
+  name: string;
+  dosage?: number;
+  frequency?: string;
+  startDate: number;
+  endDate: number;
+  notes?: string;
+  prescriber?: string;
+  pharmacy?: string;
+  medicationId?: string;
+  id: string;
+}
+
+export type Allergy = {
+  name: string;
+  severity: number;
+  reaction?: string;
+  notes?: string;
+  id: string;
+}
