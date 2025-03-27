@@ -141,6 +141,30 @@ export type EncryptedFileNode = {
   members: FileNodeMember[];
 }
 
+export type Health = {
+  bloodPressure: { date: number, level: string }[];
+  bloodSugar: { date: number, level: string }[];
+  cholesterol: { date: number, level: string }[];
+  weightInKg: { date: number, level: string }[];
+  heightInMeters: number;
+  bodyMassIndex: { date: number, level: number }[];
+  bodyFatPercentage: { date: number, level: number }[];
+  bodyTemperature: { date: number, level: number }[];
+  heartRate: { date: number, level: number }[];
+  respiratoryRate: { date: number, level: number }[];
+  oxygenSaturation: { date: number, level: number }[];
+  sleep: { date: number, durationInMinutes: number, type: string }[];
+  stress: { date: number, durationInMinutes: number }[];
+  medications: Medication[];
+  allergies: Allergy[];
+  sexualHealth: {
+    sexualOrientation: string;
+    sexuallyTransmittedInfections: string[];
+    contraception: string;
+    pregnancy: string;
+  }
+}
+
 export type Medication = {
   name: string;
   dosage?: number;
