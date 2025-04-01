@@ -185,3 +185,11 @@ export type Allergy = {
   notes?: string;
   id: string;
 }
+
+export type SubscriptionUpdateResponse = {
+  revolutCustomerId?: string
+  subscribedUntilDate: number
+  subscriptionProductId: string
+  subscriptionReceiptId: string
+  userId: string
+}
